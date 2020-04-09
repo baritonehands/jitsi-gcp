@@ -7,6 +7,10 @@ This is a quick deployment-manager configuration to run Jitsi on Google Cloud Pl
 Install [Google Cloud SDK](https://cloud.google.com/sdk/docs/quickstarts). Also requires
 `openssl` to be installed.
 
+## What is Jitsi?
+
+Jitsi is a multi-platform open-source video conferencing platform. https://jitsi.org
+
 ## Rationale
 
 The goal with this project was to get your very own Jitsi instance up and running

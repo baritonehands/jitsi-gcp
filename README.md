@@ -9,7 +9,7 @@ Install [Google Cloud SDK](https://cloud.google.com/sdk/docs/quickstarts). Also 
 
 ## What is Jitsi?
 
-Jitsi is a multi-platform open-source video conferencing platform. https://jitsi.org
+Jitsi is a multi-platform open-source video conferencing service. https://jitsi.org
 
 ## Rationale
 

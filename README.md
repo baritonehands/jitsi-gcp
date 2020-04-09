@@ -18,7 +18,7 @@ It is based on the [Docker Jitsi Quickstart](https://github.com/jitsi/docker-jit
 
 Caveats:
 * JVB component is preemptible which means it will be restarted every day, and likely more often.
-* Costs could be ~$4/mo lower with NAT instead of ephemeral external IPs.
+* Costs could be $4/mo lower with NAT instead of ephemeral external IPs.
 * Domain and SSL certificate costs are not included in the estimate.
 * Network egress is also not included in the estimate.
 

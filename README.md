@@ -11,13 +11,16 @@ Install [Google Cloud SDK](https://cloud.google.com/sdk/docs/quickstarts). Also 
 
 The goal with this project was to get your very own Jitsi instance up and running
 in Google Cloud Platform as fast as possible, at a low cost. Based on the pricing
-calculator in April 2020, the cost would be about [$22.26 per month](https://cloud.google.com/products/calculator#id=506e5e09-0808-4b88-afa5-8d12c24d0d78).
+calculator in April 2020, the cost of running 24/7 would be about
+[$22.26 per month](https://cloud.google.com/products/calculator#id=506e5e09-0808-4b88-afa5-8d12c24d0d78).
 
 It is based on the [Docker Jitsi Quickstart](https://github.com/jitsi/docker-jitsi-meet).
 
 Caveats:
 * JVB component is preemptible which means it will be restarted every day, and likely more often.
-*
+* Costs could be ~$4/mo lower with NAT instead of ephemeral external IPs.
+* Domain and SSL certificate costs are not included in the estimate.
+* Network egress is also not included in the estimate.
 
 ### Disclaimer
 
@@ -47,4 +50,4 @@ To destroy, run the delete command:
 
 See [Docker Jitsi Let's Encrypt Config](https://github.com/jitsi/docker-jitsi-meet#lets-encrypt-configuration).
 
-You would add the required configuration to env.yaml.
+You would add the required configuration to env.yaml. A static IP would also probably be a good idea.

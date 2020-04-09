@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: jitsi-xmpp
+spec:
+  containers:
+    - name: jitsi-xmpp
+      image: jitsi/prosody
+      ports:
+        - containerPort: 5222
+        - containerPort: 5347
+        - containerPort: 5280
+      stdin: false
+      tty: false

@@ -1,0 +1,29 @@
+info:
+  title: VM Template
+  description: Template for a Jitsi VM instance
+
+imports:
+- path: instance.py
+
+required:
+- jvb_password
+- jicofo_password
+- container_manifest
+
+properties:
+  jvb_password:
+    type: string
+    description: Password for JVB account
+
+  jicofo_password:
+    type: string
+    description: Password for Jicofo account
+
+  container_manifest:
+    type: string
+    description: Which manifest to use for container
+
+  tags:
+    type: array
+    default: []
+    description: Network tags

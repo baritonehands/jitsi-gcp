@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: jitsi-web
+spec:
+  containers:
+    - name: jitsi-web
+      image: jitsi/web
+      ports:
+        - name: http
+          containerPort: 80
+        - name: https
+          containerPort: 443
+      stdin: false
+      tty: false

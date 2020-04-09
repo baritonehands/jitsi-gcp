@@ -1,0 +1,36 @@
+resources:
+  - name: jitsi-web
+    type: templates/instance.py
+    properties:
+      jvb_password: {{ properties['jvb_password'] }}
+      jicofo_password: {{ properties['jicofo_password'] }}
+      jicofo_secret: {{ properties['jicofo_secret'] }}
+      container_manifest: web_manifest
+      tags:
+        - http-server
+        - https-server
+  - name: jitsi-xmpp
+    type: templates/instance.py
+    properties:
+      jvb_password: {{ properties['jvb_password'] }}
+      jicofo_password: {{ properties['jicofo_password'] }}
+      jicofo_secret: {{ properties['jicofo_secret'] }}
+      container_manifest: xmpp_manifest
+  - name: jitsi-jicofo
+    type: templates/instance.py
+    properties:
+      jvb_password: {{ properties['jvb_password'] }}
+      jicofo_password: {{ properties['jicofo_password'] }}
+      jicofo_secret: {{ properties['jicofo_secret'] }}
+      container_manifest: jicofo_manifest
+  - name: jitsi-jvb
+    type: templates/preemptible-instance.py
+    properties:
+      container_manifest: jvb_manifest
+      machine_type: n1-standard-1
+      jvb_password: {{ properties['jvb_password'] }}
+      jicofo_password: {{ properties['jicofo_password'] }}
+      jicofo_secret: {{ properties['jicofo_secret'] }}
+      tags:
+        - jitsi-bridge-udp
+        - jitsi-bridge-tcp

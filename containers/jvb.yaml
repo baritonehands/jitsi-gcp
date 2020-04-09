@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: jitsi-jvb
+spec:
+  containers:
+    - name: jitsi-jvb
+      image: jitsi/jvb
+      ports:
+        - name: udp
+          containerPort: 10000
+          protocol: UDP
+        - name: tcp
+          containerPort: 4443
+      stdin: false
+      tty: false

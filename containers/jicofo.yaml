@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: jitsi-jicofo
+spec:
+  containers:
+    - name: jitsi-jicofo
+      image: jitsi/jicofo
+      stdin: false
+      tty: false

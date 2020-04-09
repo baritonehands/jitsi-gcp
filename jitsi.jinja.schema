@@ -1,0 +1,35 @@
+info:
+  title: Jitsi Template
+  description: Template for a Jitsi deployment
+
+imports:
+- path: env.yaml
+  name: env_variables
+- path: containers/web.yaml
+  name: web_manifest
+- path: containers/xmpp.yaml
+  name: xmpp_manifest
+- path: containers/jicofo.yaml
+  name: jicofo_manifest
+- path: containers/jvb.yaml
+  name: jvb_manifest
+- path: templates/instance.py
+- path: templates/preemptible-instance.py
+
+required:
+- jvb_password
+- jicofo_password
+- jicofo_secret
+
+properties:
+  jvb_password:
+    type: string
+    description: Secure password for JVB account
+
+  jicofo_password:
+    type: string
+    description: Secure password for Jicofo account
+
+  jicofo_secret:
+    type: string
+    description: Secret for Jicofo account

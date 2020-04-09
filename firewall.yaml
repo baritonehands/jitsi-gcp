@@ -1,0 +1,12 @@
+resources:
+- type: compute.v1.firewall
+  name: jitsi-bridge-udp
+  properties:
+    sourceRanges:
+      - '0.0.0.0/0'
+    targetTags:
+      - jitsi-bridge-udp
+    allowed:
+      - IPProtocol: udp
+        ports:
+          - '10000'

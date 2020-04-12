@@ -46,6 +46,11 @@ Run the deployment manager to create instances:
 
 **Note**: The openssl commands are required to generate random secure passwords.
 
+Once things are running, you can grab the external IP of the jitsi-web instance from
+the console UI, or use gcloud:
+
+    gcloud compute instances describe jitsi-web --format='get(networkInterfaces[0].accessConfigs[0].natIP)'
+
 To destroy, run the delete command:
 
     gcloud deployment-manager deployments delete jitsi

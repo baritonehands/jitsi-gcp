@@ -55,8 +55,10 @@ To destroy, run the delete command:
 
     gcloud deployment-manager deployments delete jitsi
 
-## SSL setup
+## LetsEncrypt SSL setup
 
 See [Docker Jitsi Let's Encrypt Config](https://github.com/jitsi/docker-jitsi-meet#lets-encrypt-configuration).
 
-You would add the required configuration to env.yaml. A static IP would also probably be a good idea.
+You would add the required configuration to env.yaml. A static IP would also
+probably be a good idea for the jitsi-web node. You need to have the DNS set up
+pointed at jitsi-web before it comes up in order for Let's Encrypt to work.

@@ -34,7 +34,7 @@ def GenerateConfig(context):
     'type': 'compute.v1.instance',
     'properties': {
       'zone': 'us-central1-a',
-      'machineType': ''.join(['zones/us-central1-a/machineTypes/', context.properties.get('machineType', 'f1-micro')]),
+      'machineType': ''.join(['zones/us-central1-a/machineTypes/', context.properties.get('machine_type', 'f1-micro')]),
       'metadata': {
         'items': [{
           'key': 'gce-container-declaration',

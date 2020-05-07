@@ -34,7 +34,7 @@ your Google Cloud account for optimal pricing.
 
 ## One Time Setup
 
-Add the firewall rules for Jitsi's video bridge:
+Add the firewall rules for http and Jitsi's video bridge:
 
     gcloud deployment-manager deployments create jitsi-firewall --config firewall.yaml
 

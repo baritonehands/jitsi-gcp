@@ -10,3 +10,25 @@ resources:
       - IPProtocol: udp
         ports:
           - '10000'
+- type: compute.v1.firewall
+  name: default-http
+  properties:
+    sourceRanges:
+      - '0.0.0.0/0'
+    targetTags:
+      - http-server
+    allowed:
+      - IPProtocol: tcp
+        ports:
+          - '80'
+- type: compute.v1.firewall
+  name: default-https
+  properties:
+    sourceRanges:
+      - '0.0.0.0/0'
+    targetTags:
+      - https-server
+    allowed:
+      - IPProtocol: tcp
+        ports:
+          - '443'
